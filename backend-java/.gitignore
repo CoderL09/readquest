@@ -1,0 +1,5 @@
+target/
+private_uploads/
+.env
+.env.*
+*.log

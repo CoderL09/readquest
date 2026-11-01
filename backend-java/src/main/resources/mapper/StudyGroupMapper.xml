@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.StudyGroupMapper">
+ <select id="lockBook" resultType="com.readquest.pojo.Book">SELECT * FROM books WHERE id=#{id} FOR UPDATE</select>
+ <select id="joined" resultType="string">SELECT book_id FROM group_memberships WHERE user_id=#{user} ORDER BY created_at DESC,id</select>
+ <select id="owned" resultType="string">SELECT id FROM books WHERE owner_id=#{user}</select>
+ <select id="member" resultType="com.readquest.pojo.StudyGroupMember">SELECT g.* FROM group_memberships g JOIN users u ON u.id=g.user_id AND u.status='active' WHERE g.book_id=#{book} AND g.user_id=#{user}</select>
+ <select id="memberAny" resultType="com.readquest.pojo.StudyGroupMember">SELECT * FROM group_memberships WHERE book_id=#{book} AND user_id=#{user}</select>
+ <select id="members" resultType="com.readquest.pojo.StudyGroupMember">SELECT g.* FROM group_memberships g JOIN users u ON u.id=g.user_id AND u.status='active' WHERE g.book_id=#{book} ORDER BY g.created_at,g.id LIMIT #{limit} OFFSET #{offset}</select>
+ <select id="countMembers" resultType="long">SELECT COUNT(*) FROM group_memberships g JOIN users u ON u.id=g.user_id AND u.status='active' WHERE g.book_id=#{book}</select>
+ <insert id="insertMember">INSERT INTO group_memberships(id,book_id,user_id,role,muted_until,created_at,updated_at) VALUES(#{id},#{bookId},#{userId},#{role},#{mutedUntil},#{createdAt},#{updatedAt})</insert>
+ <update id="role">UPDATE group_memberships SET role=#{role},updated_at=CURRENT_TIMESTAMP(3) WHERE book_id=#{book} AND user_id=#{user}</update>
+ <update id="mute">UPDATE group_memberships SET muted_until=#{until},updated_at=CURRENT_TIMESTAMP(3) WHERE book_id=#{book} AND user_id=#{user}</update>
+ <delete id="removeMember">DELETE FROM group_memberships WHERE book_id=#{book} AND user_id=#{user}</delete>
+ <select id="adminCount" resultType="long">SELECT COUNT(*) FROM group_memberships g JOIN users u ON u.id=g.user_id AND u.status='active' WHERE g.book_id=#{book} AND g.role='admin'</select>
+ <select id="progress" resultType="com.readquest.vo.GroupProgress">SELECT user_id,COALESCE(SUM(completed_paragraphs),0) AS completed_paragraphs,COALESCE(SUM(total_paragraphs),0) AS total_paragraphs,SUM(CASE WHEN completed_at IS NOT NULL THEN 1 ELSE 0 END) AS completed_chapters,MAX(updated_at) AS last_active_at FROM reading_progress WHERE book_id=#{book} AND user_id IN <foreach collection="users" item="user" open="(" separator="," close=")">#{user}</foreach> GROUP BY user_id</select>
+ <select id="totalChapters" resultType="long">SELECT COUNT(*) FROM chapters WHERE book_id=#{book}</select>
+ <select id="message" resultType="com.readquest.pojo.StudyGroupMessage">SELECT * FROM group_messages WHERE book_id=#{book} AND id=#{id}</select>
+ <select id="submission" resultType="com.readquest.pojo.StudyGroupMessage">SELECT * FROM group_messages WHERE book_id=#{book} AND sender_user_id=#{user} AND client_message_id=#{client}</select>
+ <insert id="insertMessage" useGeneratedKeys="true" keyProperty="sequence" keyColumn="sequence">INSERT INTO group_messages(id,book_id,sender_user_id,body,client_message_id,created_at,updated_at) VALUES(#{id},#{bookId},#{senderUserId},#{body},#{clientMessageId},#{createdAt},#{updatedAt})</insert>
+ <update id="assignMessageId">UPDATE group_messages SET id=#{id} WHERE sequence=#{sequence}</update>
+ <select id="messages" resultType="com.readquest.pojo.StudyGroupMessage">SELECT m.* FROM group_messages m WHERE m.book_id=#{book} AND NOT EXISTS(SELECT 1 FROM user_blocks b WHERE b.blocker_user_id=#{user} AND b.blocked_user_id=m.sender_user_id)
+  <if test="before != null">AND m.sequence &lt; #{before}</if><if test="after != null">AND m.sequence > #{after}</if>
+  ORDER BY m.sequence <choose><when test="after != null">ASC</when><otherwise>DESC</otherwise></choose> LIMIT #{limit}
+ </select>
+ <update id="deleteMessage">UPDATE group_messages SET deleted_at=CURRENT_TIMESTAMP(3),deleted_by_user_id=#{user},deletion_reason=#{reason},updated_at=CURRENT_TIMESTAMP(3) WHERE book_id=#{book} AND id=#{id} AND deleted_at IS NULL</update>
+ <insert id="block">INSERT INTO user_blocks(blocker_user_id,blocked_user_id,created_at) VALUES(#{user},#{target},CURRENT_TIMESTAMP(3)) ON DUPLICATE KEY UPDATE blocker_user_id=#{user}</insert>
+ <delete id="unblock">DELETE FROM user_blocks WHERE blocker_user_id=#{user} AND blocked_user_id=#{target}</delete>
+ <select id="blocked" resultType="boolean">SELECT COUNT(*)>0 FROM user_blocks WHERE blocker_user_id=#{user} AND blocked_user_id=#{target}</select>
+ <insert id="report">INSERT INTO content_reports(id,book_id,reporter_user_id,target_type,target_message_id,target_user_id,reason,details,status,created_at,updated_at) VALUES(#{id},#{bookId},#{reporterUserId},#{targetType},#{targetMessageId},#{targetUserId},#{reason},#{details},#{status},#{createdAt},#{updatedAt})</insert>
+ <insert id="audit">INSERT INTO group_audit_events(id,book_id,actor_user_id,action,target_type,target_id,reason,created_at) VALUES(#{id},#{bookId},#{actorUserId},#{action},#{targetType},#{targetId},#{reason},#{createdAt})</insert>
+ <insert id="event">INSERT INTO group_events(book_id,message_id,event_type,created_at) VALUES(#{book},#{message},'message',CURRENT_TIMESTAMP(3))</insert>
+ <insert id="memberEvents">INSERT INTO group_events(book_id,message_id,event_type,created_at) SELECT book_id,id,'message',CURRENT_TIMESTAMP(3) FROM group_messages WHERE book_id=#{book} AND sender_user_id=#{user}</insert>
+ <select id="latestEvent" resultType="long">SELECT COALESCE(MAX(sequence),0) FROM group_events WHERE book_id=#{book}</select>
+ <select id="events" resultType="com.readquest.pojo.StudyGroupEvent">SELECT * FROM group_events WHERE book_id=#{book} AND sequence>#{after} ORDER BY sequence LIMIT 100</select>
+ <delete id="deleteBlocks">DELETE FROM user_blocks WHERE blocker_user_id=#{user} OR blocked_user_id=#{user}</delete>
+ <delete id="deleteReports">DELETE FROM content_reports WHERE reporter_user_id=#{user}</delete>
+ <update id="anonymizeMessages">UPDATE group_messages SET sender_user_id=#{alias} WHERE sender_user_id=#{user}</update>
+ <update id="anonymizeDeleters">UPDATE group_messages SET deleted_by_user_id=#{alias} WHERE deleted_by_user_id=#{user}</update>
+ <update id="anonymizeAudits">UPDATE group_audit_events SET actor_user_id=#{alias} WHERE actor_user_id=#{user}</update>
+ <update id="anonymizeTargets">UPDATE group_audit_events SET target_id=#{alias} WHERE target_type='member' AND target_id=#{user}</update>
+ <update id="anonymizeReports">UPDATE content_reports SET target_user_id=#{alias} WHERE target_user_id=#{user}</update>
+</mapper>

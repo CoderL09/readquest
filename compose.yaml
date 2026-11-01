@@ -1,0 +1,65 @@
+name: readquest-java
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: readquest
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD in backend-java/.env}
+    ports:
+      - "127.0.0.1:${MYSQL_PUBLISH_PORT:-3307}:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MYSQL_ROOT_PASSWORD\" mysql -uroot -e 'SELECT 1' >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+  redis:
+    image: redis:7.4-alpine
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?Set REDIS_PASSWORD in backend-java/.env}
+    command: ["sh", "-c", "exec redis-server --appendonly yes --requirepass \"$$REDIS_PASSWORD\""]
+    ports:
+      - "127.0.0.1:${REDIS_PUBLISH_PORT:-6380}:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "REDISCLI_AUTH=\"$$REDIS_PASSWORD\" redis-cli ping | grep -q PONG"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+  app:
+    build: .
+    image: readquest-java:local
+    env_file:
+      - backend-java/.env
+    environment:
+      MYSQL_URL: jdbc:mysql://mysql:3306/readquest?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true
+      MYSQL_USER: root
+      REDIS_ENABLED: "true"
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      PORT: "8080"
+      MANAGEMENT_PORT: "9091"
+      MANAGEMENT_ADDRESS: 0.0.0.0
+      SPRING_PROFILES_ACTIVE: ${COMPOSE_PROFILE:-local}
+      MAIL_DELIVERY_MODE: ${COMPOSE_MAIL_DELIVERY_MODE:-local}
+      SECURE_COOKIE: "false"
+    ports:
+      - "127.0.0.1:${APP_PUBLISH_PORT:-8081}:8080"
+      - "127.0.0.1:${MANAGEMENT_PUBLISH_PORT:-9092}:9091"
+    volumes:
+      - uploads:/app/private_uploads
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    stop_grace_period: 40s
+    restart: unless-stopped
+volumes:
+  mysql-data:
+  redis-data:
+  uploads:

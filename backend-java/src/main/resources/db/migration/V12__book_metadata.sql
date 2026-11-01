@@ -1,0 +1,1 @@
+ALTER TABLE books ADD COLUMN metadata_json LONGTEXT NULL;

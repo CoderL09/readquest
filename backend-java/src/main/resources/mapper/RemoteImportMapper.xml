@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.RemoteImportMapper">
+ <select id="find" resultType="com.readquest.pojo.RemoteImportJob">SELECT * FROM remote_import_jobs WHERE user_id=#{user} AND id=#{id}</select>
+ <select id="byUrl" resultType="com.readquest.pojo.RemoteImportJob">SELECT * FROM remote_import_jobs WHERE user_id=#{user} AND url_hash=#{hash}</select>
+ <select id="pending" resultType="com.readquest.pojo.RemoteImportJob">SELECT * FROM remote_import_jobs WHERE status='queued' OR status='ingesting' OR (status='fetching' AND lease_expires_at &lt; CURRENT_TIMESTAMP(3)) ORDER BY created_at LIMIT 10</select>
+ <insert id="insert">INSERT INTO remote_import_jobs(id,user_id,request_url,url_hash,display_url,title,kind,status,active_owner,created_at,updated_at,source_metadata_json) VALUES(#{id},#{userId},#{requestUrl},#{urlHash},#{displayUrl},#{title},#{kind},'queued',#{userId},#{createdAt},#{updatedAt},#{sourceMetadataJson})</insert>
+ <update id="retry">UPDATE remote_import_jobs SET status='queued',attempts=0,error_code=NULL,book_id=NULL,file_job_id=NULL,run_id=NULL,active_owner=#{user},updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND user_id=#{user} AND status='failed'</update>
+ <update id="claim">UPDATE remote_import_jobs SET status='fetching',run_id=#{run},attempts=attempts+1,lease_expires_at=TIMESTAMPADD(MINUTE,2,CURRENT_TIMESTAMP(3)),updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND attempts &lt; 3 AND (status='queued' OR (status='fetching' AND lease_expires_at &lt; CURRENT_TIMESTAMP(3)))</update>
+ <update id="ingest">UPDATE remote_import_jobs SET status='ingesting',book_id=#{book},file_job_id=#{fileJob},kind=#{kind},lease_expires_at=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND status='fetching' AND run_id=#{run} AND lease_expires_at>CURRENT_TIMESTAMP(3)</update>
+ <update id="fail">UPDATE remote_import_jobs SET status='failed',error_code=#{code},active_owner=NULL,lease_expires_at=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND run_id=#{run} AND status='fetching'</update>
+ <update id="terminal">UPDATE remote_import_jobs SET status=#{status},error_code=#{code},active_owner=NULL,lease_expires_at=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND status IN ('ingesting','fetching')</update>
+ <update id="source">UPDATE books SET title=CASE WHEN #{title}='' THEN title ELSE #{title} END,metadata_json=#{metadata},updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{book} AND visibility!='removed'</update>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.NoteMapper">
+<sql id="noteView">SELECT n.*, b.title AS book_title, b.author AS book_author, c.stage_title AS chapter_title
+ FROM book_notes n LEFT JOIN books b ON b.id=n.book_id AND
+ ((b.owner_id=n.user_id AND b.visibility!='removed') OR (b.status='completed' AND b.visibility='public' AND b.moderation_status IN ('unreviewed','approved') AND b.asset_scope IN ('private','verified-shared')))
+ LEFT JOIN chapters c ON c.id=n.chapter_id AND c.book_id=b.id
+ WHERE n.user_id=#{userId}</sql>
+<select id="list" resultType="com.readquest.vo.BookNoteView"><include refid="noteView"/> ORDER BY n.created_at DESC,n.id DESC LIMIT #{limit} OFFSET #{offset}</select>
+<select id="findView" resultType="com.readquest.vo.BookNoteView"><include refid="noteView"/> AND n.id=#{id}</select>
+<select id="count" resultType="long">SELECT COUNT(*) FROM book_notes WHERE user_id=#{userId}</select>
+<select id="find" resultType="com.readquest.pojo.BookNote">SELECT * FROM book_notes WHERE user_id=#{userId} AND id=#{id}</select>
+<insert id="insert">INSERT INTO book_notes(id,user_id,book_id,chapter_id,paragraph_index,quote,note,created_at,updated_at) VALUES(#{id},#{userId},#{bookId},#{chapterId},#{paragraphIndex},#{quote},#{note},#{createdAt},#{updatedAt})</insert>
+<update id="update">UPDATE book_notes SET note=#{note},updated_at=CURRENT_TIMESTAMP(3) WHERE user_id=#{userId} AND id=#{id}</update>
+<delete id="delete">DELETE FROM book_notes WHERE user_id=#{userId} AND id=#{id}</delete></mapper>

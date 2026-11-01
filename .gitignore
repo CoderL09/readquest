@@ -1,0 +1,23 @@
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+node_modules/
+dist/
+dist-ssr/
+target/
+coverage/
+backend-java/private_uploads/
+*.mdx
+*.log
+*.tsbuildinfo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Local configuration, reading materials and private verification output
+.env.*
+*.epub
+*.local.json
+*.jfr

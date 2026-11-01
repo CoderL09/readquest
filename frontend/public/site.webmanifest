@@ -1,0 +1,21 @@
+{
+  "name": "ReadQuest",
+  "short_name": "ReadQuest",
+  "description": "A calm, adaptive English reading space.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#f8fafc",
+  "icons": [
+    {
+      "src": "/assets/readquest-app-icon-v3-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/readquest-app-icon-v3-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

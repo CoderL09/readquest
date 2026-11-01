@@ -1,0 +1,79 @@
+server:
+  port: ${PORT:8080}
+  shutdown: graceful
+spring:
+  application:
+    name: readquest
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      connect-timeout: 200ms
+      timeout: 200ms
+      client-name: readquest
+  task:
+    scheduling:
+      pool:
+        size: 4
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/readquest?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true}
+    username: ${MYSQL_USER:readquest}
+    password: ${MYSQL_PASSWORD}
+    hikari:
+      connection-timeout: 3000
+      validation-timeout: 1000
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  servlet:
+    multipart:
+      max-file-size: 80MB
+      max-request-size: 81MB
+  flyway:
+    enabled: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+readquest:
+  redis:
+    enabled: ${REDIS_ENABLED:false}
+  management-token: ${MANAGEMENT_TOKEN:}
+  jwt-secret: ${JWT_SECRET}
+  secure-cookie: ${SECURE_COOKIE:true}
+  allowed-origins: ${ALLOWED_ORIGINS:http://localhost:5173}
+springdoc:
+  api-docs:
+    enabled: ${API_DOCS_ENABLED:false}
+  swagger-ui:
+    enabled: ${API_DOCS_ENABLED:false}
+  packages-to-scan: com.readquest.controller
+  paths-to-match: /api/**
+management:
+  server:
+    port: ${MANAGEMENT_PORT:9091}
+    address: ${MANAGEMENT_ADDRESS:127.0.0.1}
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: never
+      probes:
+        enabled: true
+      group:
+        readiness:
+          include: readinessState,db
+  health:
+    redis:
+      enabled: ${REDIS_ENABLED:false}
+  metrics:
+    tags:
+      application: readquest
+logging:
+  pattern:
+    level: '%5p [requestId=%X{requestId:-}]'

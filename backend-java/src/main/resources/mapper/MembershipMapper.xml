@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.MembershipMapper">
+ <select id="lockUser" resultType="com.readquest.pojo.User">SELECT * FROM users WHERE id=#{id} AND status='active' FOR UPDATE</select>
+ <select id="active" resultType="com.readquest.pojo.UserEntitlement">SELECT * FROM user_entitlements WHERE user_id=#{user} AND starts_at &lt;=CURRENT_TIMESTAMP(3) AND (ends_at IS NULL OR ends_at>CURRENT_TIMESTAMP(3)) ORDER BY starts_at DESC</select>
+ <select id="latest" resultType="com.readquest.pojo.UserEntitlement">SELECT * FROM user_entitlements WHERE user_id=#{user} AND code='pro' ORDER BY starts_at DESC LIMIT 1</select>
+ <select id="lockCode" resultType="com.readquest.pojo.MembershipRedemptionCode">SELECT * FROM membership_redemption_codes WHERE code_hash=#{hash} FOR UPDATE</select>
+ <update id="consume">UPDATE membership_redemption_codes SET redeemed_at=CURRENT_TIMESTAMP(3),redeemed_by_user_id=#{user} WHERE code_hash=#{hash} AND redeemed_at IS NULL AND revoked_at IS NULL AND expires_at>CURRENT_TIMESTAMP(3)</update>
+ <insert id="insertEntitlement">INSERT INTO user_entitlements(id,source_order_no,user_id,code,label,starts_at,ends_at) VALUES(#{id},#{sourceOrderNo},#{userId},#{code},#{label},#{startsAt},#{endsAt})</insert>
+ <select id="usedUnits" resultType="long">SELECT COALESCE(SUM(units),0) FROM feature_usage WHERE user_id=#{user} AND occurred_at>=#{from} AND occurred_at &lt; #{until} AND result='allowed'</select>
+ <insert id="record">INSERT INTO feature_usage(user_id,request_id,feature,occurred_at,result,units) VALUES(#{userId},#{requestId},#{feature},#{occurredAt},#{result},#{units})</insert>
+ <update id="providerFailed">UPDATE feature_usage SET result='provider_failed' WHERE user_id=#{user} AND request_id=#{request} AND result='allowed'</update>
+ <insert id="hit">INSERT INTO rate_limit_buckets(bucket_key,window_start,hits,expires_at) VALUES(#{key},#{window},1,#{expires}) ON DUPLICATE KEY UPDATE hits=CASE WHEN window_start=#{window} THEN hits+1 ELSE 1 END,window_start=#{window},expires_at=#{expires}</insert>
+ <select id="hits" resultType="int">SELECT hits FROM rate_limit_buckets WHERE bucket_key=#{key}</select>
+ <delete id="cleanup">DELETE FROM rate_limit_buckets WHERE expires_at &lt; CURRENT_TIMESTAMP(3)</delete>
+ <update id="updateDisplayName">UPDATE users SET display_name=#{name},updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{user} AND status='active'</update>
+ <select id="sessions" resultType="com.readquest.pojo.RefreshSession">SELECT id,user_id,expires_at,created_at FROM refresh_sessions WHERE user_id=#{user} AND revoked_at IS NULL AND expires_at>CURRENT_TIMESTAMP(3) ORDER BY created_at DESC</select>
+ <update id="revokeSession">UPDATE refresh_sessions SET revoked_at=CURRENT_TIMESTAMP(3) WHERE user_id=#{user} AND id=#{id} AND revoked_at IS NULL</update>
+</mapper>

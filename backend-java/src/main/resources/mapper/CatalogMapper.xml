@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.CatalogMapper">
+ <select id="snapshot" resultType="com.readquest.pojo.CatalogSnapshot">SELECT * FROM catalog_snapshots WHERE cache_key=#{key}</select>
+ <insert id="save">INSERT INTO catalog_snapshots(cache_key,items_json,fetched_at,expires_at) VALUES(#{cacheKey},#{itemsJson},#{fetchedAt},#{expiresAt}) ON DUPLICATE KEY UPDATE items_json=#{itemsJson},fetched_at=#{fetchedAt},expires_at=#{expiresAt}</insert>
+ <delete id="cleanup">DELETE FROM catalog_snapshots WHERE expires_at &lt; CURRENT_TIMESTAMP(3)</delete>
+</mapper>

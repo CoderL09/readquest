@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.ReadingMapper">
+ <select id="chapter" resultType="com.readquest.pojo.Chapter">SELECT * FROM chapters WHERE id=#{id}</select>
+ <select id="lockUser" resultType="com.readquest.pojo.User">SELECT * FROM users WHERE id=#{id} AND status='active' FOR UPDATE</select>
+ <select id="event" resultType="com.readquest.pojo.ReadingEvent">SELECT * FROM reading_events WHERE user_id=#{user} AND event_id=#{event}</select>
+ <insert id="insertEvent">INSERT INTO reading_events(user_id,event_id,book_id,chapter_id,current_paragraph_index,completed_paragraphs,total_paragraphs,reading_duration_ms,created_at) VALUES(#{userId},#{eventId},#{bookId},#{chapterId},#{currentParagraphIndex},#{completedParagraphs},#{totalParagraphs},#{readingDurationMs},CURRENT_TIMESTAMP(3))</insert>
+ <insert id="mergeProgress">INSERT INTO reading_progress(user_id,book_id,chapter_id,current_paragraph_index,completed_paragraphs,total_paragraphs,total_reading_ms,completed_at,updated_at)
+ VALUES(#{userId},#{bookId},#{chapterId},#{currentParagraphIndex},#{completedParagraphs},#{totalParagraphs},#{readingDurationMs},CASE WHEN #{totalParagraphs}>0 AND #{completedParagraphs}=#{totalParagraphs} THEN CURRENT_TIMESTAMP(3) ELSE NULL END,CURRENT_TIMESTAMP(3))
+ ON DUPLICATE KEY UPDATE current_paragraph_index=#{currentParagraphIndex},completed_paragraphs=GREATEST(completed_paragraphs,#{completedParagraphs}),total_paragraphs=#{totalParagraphs},total_reading_ms=total_reading_ms+#{readingDurationMs},completed_at=CASE WHEN #{totalParagraphs}>0 AND GREATEST(completed_paragraphs,#{completedParagraphs})>=#{totalParagraphs} THEN COALESCE(completed_at,CURRENT_TIMESTAMP(3)) ELSE completed_at END,updated_at=CURRENT_TIMESTAMP(3)</insert>
+</mapper>

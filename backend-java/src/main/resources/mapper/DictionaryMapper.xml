@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.DictionaryMapper">
+ <select id="find" resultType="com.readquest.pojo.UserDictionary">SELECT * FROM user_dictionaries WHERE user_id=#{user}</select>
+ <insert id="insert">INSERT INTO user_dictionaries(id,user_id,display_name,original_file_name,storage_key,byte_size,checksum_sha256,created_at,updated_at) VALUES(#{id},#{userId},#{displayName},#{originalFileName},#{storageKey},#{byteSize},#{checksumSha256},#{createdAt},#{updatedAt})</insert>
+ <delete id="delete">DELETE FROM user_dictionaries WHERE user_id=#{user}</delete>
+</mapper>

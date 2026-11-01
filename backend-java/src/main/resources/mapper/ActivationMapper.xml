@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.ActivationMapper">
+ <select id="find" resultType="com.readquest.pojo.ActivationPurchase">SELECT * FROM activation_purchases WHERE user_id=#{user} AND id=#{id}</select>
+ <select id="idempotent" resultType="com.readquest.pojo.ActivationPurchase">SELECT * FROM activation_purchases WHERE user_id=#{user} AND request_key=#{key}</select>
+ <select id="lock" resultType="com.readquest.pojo.ActivationPurchase">SELECT * FROM activation_purchases WHERE id=#{id} FOR UPDATE</select>
+ <select id="list" resultType="com.readquest.pojo.ActivationPurchase">SELECT * FROM activation_purchases WHERE user_id=#{user} ORDER BY created_at DESC LIMIT 50</select>
+ <select id="recent" resultType="int">SELECT COUNT(*) FROM activation_purchases WHERE (user_id=#{user} OR email_hash=#{emailHash}) AND created_at>#{since}</select>
+ <insert id="insert">INSERT INTO activation_purchases(id,user_id,request_key,email,email_hash,status,delivery_status,delivery_mode,attempts,created_at,updated_at) VALUES(#{id},#{userId},#{requestKey},#{email},#{emailHash},#{status},#{deliveryStatus},#{deliveryMode},0,#{createdAt},#{updatedAt})</insert>
+ <update id="save">UPDATE activation_purchases SET status=#{status},code_id=#{codeId},delivery_status=#{deliveryStatus},sealed_code=#{sealedCode},attempts=#{attempts},lease_id=#{leaseId},lease_until=#{leaseUntil},next_attempt_at=#{nextAttemptAt},code_expires_at=#{codeExpiresAt},updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id}</update>
+ <insert id="insertCode">INSERT INTO membership_redemption_codes(id,code_hash,code_suffix,label,duration_days,expires_at,bound_user_id) VALUES(#{id},#{hash},#{suffix},'模拟购买 · 7 天体验会员',7,#{expires},#{user})</insert>
+ <select id="pending" resultType="com.readquest.pojo.ActivationPurchase">SELECT * FROM activation_purchases WHERE status='paid' AND delivery_status IN ('pending','failed') AND sealed_code IS NOT NULL AND (lease_until IS NULL OR lease_until &lt; CURRENT_TIMESTAMP(3)) AND attempts &lt; 5 AND code_expires_at>CURRENT_TIMESTAMP(3) AND (next_attempt_at IS NULL OR next_attempt_at &lt;= CURRENT_TIMESTAMP(3)) ORDER BY created_at LIMIT 20</select>
+ <update id="clearExpiredPayloads">UPDATE activation_purchases SET sealed_code=NULL,delivery_status='expired' WHERE id=#{id} AND code_expires_at &lt;=CURRENT_TIMESTAMP(3) AND sealed_code IS NOT NULL</update>
+ <update id="revokeOwnedCodes">UPDATE membership_redemption_codes SET revoked_at=CURRENT_TIMESTAMP(3),bound_user_id=NULL WHERE bound_user_id=#{user}</update>
+ <delete id="deleteOwned">DELETE FROM activation_purchases WHERE user_id=#{user}</delete>
+</mapper>

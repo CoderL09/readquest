@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.BookMapper">
+<select id="accessibleMany" resultType="com.readquest.pojo.Book">SELECT * FROM books WHERE id IN
+ <foreach collection="ids" item="id" open="(" separator="," close=")">#{id}</foreach>
+ AND ((owner_id=#{userId} AND visibility!='removed') OR (status='completed' AND visibility='public' AND moderation_status IN ('unreviewed','approved') AND asset_scope IN ('private','verified-shared')))</select>
+<select id="findById" resultType="com.readquest.pojo.Book">SELECT * FROM books WHERE id=#{id}</select>
+<select id="list" resultType="com.readquest.pojo.Book">SELECT * FROM books WHERE (owner_id=#{userId} AND visibility != 'removed') OR (status='completed' AND visibility='public' AND moderation_status IN ('unreviewed','approved') AND asset_scope IN ('private','verified-shared')) ORDER BY created_at DESC,id DESC LIMIT #{limit} OFFSET #{offset}</select>
+<select id="count" resultType="long">SELECT COUNT(*) FROM books WHERE (owner_id=#{userId} AND visibility != 'removed') OR (status='completed' AND visibility='public' AND moderation_status IN ('unreviewed','approved') AND asset_scope IN ('private','verified-shared'))</select>
+<select id="uploads" resultType="com.readquest.pojo.Book">SELECT * FROM books WHERE owner_id=#{userId} AND visibility!='removed' ORDER BY created_at DESC,id DESC LIMIT #{limit} OFFSET #{offset}</select>
+<select id="uploadsCount" resultType="long">SELECT COUNT(*) FROM books WHERE owner_id=#{userId} AND visibility!='removed'</select>
+<select id="chapters" resultType="com.readquest.pojo.Chapter">SELECT * FROM chapters WHERE book_id=#{bookId} ORDER BY chapter_index</select>
+<select id="chapter" resultType="com.readquest.pojo.Chapter">SELECT * FROM chapters WHERE book_id=#{bookId} AND id=#{id}</select></mapper>

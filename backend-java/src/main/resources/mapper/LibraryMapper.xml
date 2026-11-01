@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.LibraryMapper"><select id="list" resultType="com.readquest.pojo.LibraryEntry">SELECT l.* FROM library_entries l JOIN books b ON b.id=l.book_id WHERE l.user_id=#{userId} AND b.status='completed' AND b.visibility='public' AND b.moderation_status IN ('unreviewed','approved') AND b.asset_scope IN ('private','verified-shared') ORDER BY l.updated_at DESC,l.book_id LIMIT #{limit} OFFSET #{offset}</select>
+<select id="count" resultType="long">SELECT COUNT(*) FROM library_entries l JOIN books b ON b.id=l.book_id WHERE l.user_id=#{userId} AND b.status='completed' AND b.visibility='public' AND b.moderation_status IN ('unreviewed','approved') AND b.asset_scope IN ('private','verified-shared')</select>
+<insert id="upsert">INSERT INTO library_entries(user_id,book_id,shelf_state,created_at,updated_at) VALUES(#{userId},#{bookId},#{shelfState},#{createdAt},#{updatedAt}) ON DUPLICATE KEY UPDATE shelf_state=#{shelfState},updated_at=#{updatedAt}</insert>
+<delete id="delete">DELETE FROM library_entries WHERE user_id=#{userId} AND book_id=#{bookId}</delete></mapper>

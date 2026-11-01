@@ -1,0 +1,41 @@
+name: Project checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis:7.4-alpine
+        ports: ["6379:6379"]
+        options: --health-cmd "redis-cli ping" --health-interval 5s --health-timeout 3s --health-retries 20
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: ci-test-only-password
+          MYSQL_DATABASE: readquest_test
+        ports: ["3306:3306"]
+        options: --health-cmd "mysqladmin ping -pci-test-only-password" --health-interval 5s --health-timeout 3s --health-retries 30
+    env:
+      REDIS_INTEGRATION_ENABLED: "true"
+      REDIS_TEST_PORT: "6379"
+      SPRING_APPLICATION_JSON: '{"spring":{"datasource":{"url":"jdbc:mysql://127.0.0.1:3306/readquest_test?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true&allowPublicKeyRetrieval=true&useSSL=false","username":"root","password":"ci-test-only-password","driver-class-name":"com.mysql.cj.jdbc.Driver"},"flyway":{"enabled":true},"sql":{"init":{"mode":"never"}}}}'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+          cache: maven
+      - name: Frontend checks
+        working-directory: frontend
+        run: npm ci && npm run check
+      - name: Backend checks with MySQL and real Redis
+        working-directory: backend-java
+        run: mvn -s maven-settings.xml -B -Pfrontend verify

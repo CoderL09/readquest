@@ -1,0 +1,52 @@
+[
+  {
+    "title": "The Blue Door",
+    "author": "ReadQuest Studio",
+    "cover": "",
+    "description": "A short mystery about a child who finds a strange blue door behind an old library.",
+    "lexile": 360,
+    "difficultyLevel": "starter",
+    "genre": "Mystery",
+    "sourceUrl": "mock://the-blue-door"
+  },
+  {
+    "title": "Letters from the Island",
+    "author": "ReadQuest Studio",
+    "cover": "",
+    "description": "A gentle adventure told through letters, with clear scenes and emotional clues.",
+    "lexile": 520,
+    "difficultyLevel": "easy",
+    "genre": "Adventure",
+    "sourceUrl": "mock://letters-from-the-island"
+  },
+  {
+    "title": "The Clockmaker's Secret",
+    "author": "ReadQuest Studio",
+    "cover": "",
+    "description": "A young apprentice follows hidden messages through a city of clocks.",
+    "lexile": 610,
+    "difficultyLevel": "medium",
+    "genre": "Fantasy",
+    "sourceUrl": "mock://clockmakers-secret"
+  },
+  {
+    "title": "The Silent Observatory",
+    "author": "ReadQuest Studio",
+    "cover": "",
+    "description": "A science-themed novella with longer sentences, cause-effect logic, and quiet suspense.",
+    "lexile": 760,
+    "difficultyLevel": "medium",
+    "genre": "Science Fiction",
+    "sourceUrl": "mock://silent-observatory"
+  },
+  {
+    "title": "Enemy of the State",
+    "author": "Oliver Price",
+    "cover": "",
+    "description": "A political history text with dense noun phrases and abstract argumentation.",
+    "lexile": 980,
+    "difficultyLevel": "advanced",
+    "genre": "History",
+    "sourceUrl": "mock://enemy-of-the-state"
+  }
+]

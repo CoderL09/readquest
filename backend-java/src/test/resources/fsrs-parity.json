@@ -1,0 +1,5161 @@
+{
+  "sourceVersion": "v5.4.1 using FSRS-6.0",
+  "weights": [
+    0.212,
+    1.2931,
+    2.3065,
+    8.2956,
+    6.4133,
+    0.8334,
+    3.0194,
+    0.001,
+    1.8722,
+    0.1666,
+    0.796,
+    1.4835,
+    0.0614,
+    0.2629,
+    1.6483,
+    0.6014,
+    1.8729,
+    0.5425,
+    0.0912,
+    0.0658,
+    0.1542
+  ],
+  "cases": [
+    {
+      "name": "path-0-step-0-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-0-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-0-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-1-rating-1",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-1-rating-2",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-09T10:00:00.000Z",
+        "stability": 7.51332013,
+        "difficulty": 4.75285849,
+        "elapsedDays": 2,
+        "scheduledDays": 8,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-1-rating-3",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-12T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 11,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-2-rating-1",
+      "input": {
+        "dueAt": "2026-11-12T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 11,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-14T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-14T10:10:00.000Z",
+        "stability": 1.56880168,
+        "difficulty": 7.39223814,
+        "elapsedDays": 13,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-2-rating-2",
+      "input": {
+        "dueAt": "2026-11-12T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 11,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-14T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-12-19T10:00:00.000Z",
+        "stability": 34.8388585,
+        "difficulty": 4.74828477,
+        "elapsedDays": 13,
+        "scheduledDays": 35,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-2-rating-3",
+      "input": {
+        "dueAt": "2026-11-12T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 11,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-14T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2027-01-04T10:00:00.000Z",
+        "stability": 50.66258029,
+        "difficulty": 2.1043314,
+        "elapsedDays": 13,
+        "scheduledDays": 51,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-3-rating-1",
+      "input": {
+        "dueAt": "2027-01-04T10:00:00.000Z",
+        "stability": 50.66258029,
+        "difficulty": 2.1043314,
+        "elapsedDays": 13,
+        "scheduledDays": 51,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "now": "2027-01-04T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2027-01-04T10:10:00.000Z",
+        "stability": 3.04548093,
+        "difficulty": 7.38997579,
+        "elapsedDays": 51,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-3-rating-2",
+      "input": {
+        "dueAt": "2027-01-04T10:00:00.000Z",
+        "stability": 50.66258029,
+        "difficulty": 2.1043314,
+        "elapsedDays": 13,
+        "scheduledDays": 51,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "now": "2027-01-04T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2027-05-11T10:00:00.000Z",
+        "stability": 126.95581683,
+        "difficulty": 4.74371562,
+        "elapsedDays": 51,
+        "scheduledDays": 127,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-3-rating-3",
+      "input": {
+        "dueAt": "2027-01-04T10:00:00.000Z",
+        "stability": 50.66258029,
+        "difficulty": 2.1043314,
+        "elapsedDays": 13,
+        "scheduledDays": 51,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "now": "2027-01-04T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2027-07-01T10:00:00.000Z",
+        "stability": 177.52196928,
+        "difficulty": 2.09745544,
+        "elapsedDays": 51,
+        "scheduledDays": 178,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-4-rating-1",
+      "input": {
+        "dueAt": "2027-07-01T10:00:00.000Z",
+        "stability": 177.52196928,
+        "difficulty": 2.09745544,
+        "elapsedDays": 51,
+        "scheduledDays": 178,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "now": "2027-07-03T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2027-07-03T10:10:00.000Z",
+        "stability": 4.86876667,
+        "difficulty": 7.38771571,
+        "elapsedDays": 180,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2027-07-03T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-4-rating-2",
+      "input": {
+        "dueAt": "2027-07-01T10:00:00.000Z",
+        "stability": 177.52196928,
+        "difficulty": 2.09745544,
+        "elapsedDays": 51,
+        "scheduledDays": 178,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "now": "2027-07-03T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2028-07-02T10:00:00.000Z",
+        "stability": 395.74423131,
+        "difficulty": 4.73915103,
+        "elapsedDays": 180,
+        "scheduledDays": 365,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-07-03T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-4-rating-3",
+      "input": {
+        "dueAt": "2027-07-01T10:00:00.000Z",
+        "stability": 177.52196928,
+        "difficulty": 2.09745544,
+        "elapsedDays": 51,
+        "scheduledDays": 178,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "now": "2027-07-03T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2028-07-02T10:00:00.000Z",
+        "stability": 540.37907275,
+        "difficulty": 2.09058635,
+        "elapsedDays": 180,
+        "scheduledDays": 365,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-07-03T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-0-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-0-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-0-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-1-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-1-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:25:00.000Z",
+        "stability": 0.212,
+        "difficulty": 7.60420977,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-1-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-2-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-01T10:20:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:30:00.000Z",
+        "stability": 0.05246409,
+        "difficulty": 9.59286876,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-2-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-01T10:20:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-01T10:35:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.19279765,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-2-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-01T10:20:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-02T10:20:00.000Z",
+        "stability": 0.73705093,
+        "difficulty": 8.79272653,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-3-rating-1",
+      "input": {
+        "dueAt": "2026-11-01T10:35:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.19279765,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "now": "2026-11-01T10:35:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:45:00.000Z",
+        "stability": 0.17762911,
+        "difficulty": 9.71990645,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-3-rating-2",
+      "input": {
+        "dueAt": "2026-11-01T10:35:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.19279765,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "now": "2026-11-01T10:35:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-01T10:50:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.44936983,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-3-rating-3",
+      "input": {
+        "dueAt": "2026-11-01T10:35:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.19279765,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "now": "2026-11-01T10:35:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-02T10:35:00.000Z",
+        "stability": 0.52568267,
+        "difficulty": 9.17883322,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-4-rating-1",
+      "input": {
+        "dueAt": "2026-11-02T10:35:00.000Z",
+        "stability": 0.52568267,
+        "difficulty": 9.17883322,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:35:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-04T10:45:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.71531643,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-4-rating-2",
+      "input": {
+        "dueAt": "2026-11-02T10:35:00.000Z",
+        "stability": 0.52568267,
+        "difficulty": 9.17883322,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:35:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-05T10:35:00.000Z",
+        "stability": 1.45288574,
+        "difficulty": 9.44009959,
+        "elapsedDays": 3,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-4-rating-3",
+      "input": {
+        "dueAt": "2026-11-02T10:35:00.000Z",
+        "stability": 0.52568267,
+        "difficulty": 9.17883322,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:35:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 2.06742372,
+        "difficulty": 9.16488276,
+        "elapsedDays": 3,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-5-rating-1",
+      "input": {
+        "dueAt": "2026-11-04T10:45:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.71531643,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:45:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-04T10:55:00.000Z",
+        "stability": 0.09014587,
+        "difficulty": 9.89165482,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:45:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-5-rating-2",
+      "input": {
+        "dueAt": "2026-11-04T10:45:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.71531643,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:45:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-04T11:00:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.79624214,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:45:00.000Z"
+      }
+    },
+    {
+      "name": "path-1-step-5-rating-3",
+      "input": {
+        "dueAt": "2026-11-04T10:45:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.71531643,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:45:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-05T10:45:00.000Z",
+        "stability": 0.26678127,
+        "difficulty": 9.70082948,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-04T10:45:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-0-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-0-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-0-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-1-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:15:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:25:00.000Z",
+        "stability": 0.45140292,
+        "difficulty": 8.37863212,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-1-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:15:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:30:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 6.74045952,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-1-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:15:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-10-31T10:15:00.000Z",
+        "stability": 1.33589976,
+        "difficulty": 5.10228691,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-2-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:30:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 6.74045952,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "now": "2026-11-01T10:30:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:40:00.000Z",
+        "stability": 0.40032076,
+        "difficulty": 8.91383958,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-2-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:30:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 6.74045952,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "now": "2026-11-01T10:30:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-01T10:45:00.000Z",
+        "stability": 3.59102912,
+        "difficulty": 7.8213935,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-2-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:30:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 6.74045952,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "now": "2026-11-01T10:30:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-06T10:30:00.000Z",
+        "stability": 5.11406627,
+        "difficulty": 6.72894743,
+        "elapsedDays": 2,
+        "scheduledDays": 5,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-3-rating-1",
+      "input": {
+        "dueAt": "2026-11-06T10:30:00.000Z",
+        "stability": 5.11406627,
+        "difficulty": 6.72894743,
+        "elapsedDays": 2,
+        "scheduledDays": 5,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "now": "2026-11-06T10:30:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-06T10:40:00.000Z",
+        "stability": 0.94623514,
+        "difficulty": 8.91005563,
+        "elapsedDays": 5,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-3-rating-2",
+      "input": {
+        "dueAt": "2026-11-06T10:30:00.000Z",
+        "stability": 5.11406627,
+        "difficulty": 6.72894743,
+        "elapsedDays": 2,
+        "scheduledDays": 5,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "now": "2026-11-06T10:30:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-16T10:30:00.000Z",
+        "stability": 10.4200154,
+        "difficulty": 7.81375124,
+        "elapsedDays": 5,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-3-rating-3",
+      "input": {
+        "dueAt": "2026-11-06T10:30:00.000Z",
+        "stability": 5.11406627,
+        "difficulty": 6.72894743,
+        "elapsedDays": 2,
+        "scheduledDays": 5,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "now": "2026-11-06T10:30:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-20T10:30:00.000Z",
+        "stability": 13.93672861,
+        "difficulty": 6.71744685,
+        "elapsedDays": 5,
+        "scheduledDays": 14,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-4-rating-1",
+      "input": {
+        "dueAt": "2026-11-16T10:30:00.000Z",
+        "stability": 10.4200154,
+        "difficulty": 7.81375124,
+        "elapsedDays": 5,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "now": "2026-11-18T10:30:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-18T10:40:00.000Z",
+        "stability": 1.40598083,
+        "difficulty": 9.26662326,
+        "elapsedDays": 12,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-18T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-4-rating-2",
+      "input": {
+        "dueAt": "2026-11-16T10:30:00.000Z",
+        "stability": 10.4200154,
+        "difficulty": 7.81375124,
+        "elapsedDays": 5,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "now": "2026-11-18T10:30:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-12-06T10:30:00.000Z",
+        "stability": 18.45958426,
+        "difficulty": 8.53389457,
+        "elapsedDays": 12,
+        "scheduledDays": 18,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-18T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-2-step-4-rating-3",
+      "input": {
+        "dueAt": "2026-11-16T10:30:00.000Z",
+        "stability": 10.4200154,
+        "difficulty": 7.81375124,
+        "elapsedDays": 5,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "now": "2026-11-18T10:30:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-12-12T10:30:00.000Z",
+        "stability": 23.78810463,
+        "difficulty": 7.80116586,
+        "elapsedDays": 12,
+        "scheduledDays": 24,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-18T10:30:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-0-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-0-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-0-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-1-rating-1",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-1-rating-2",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-09T10:00:00.000Z",
+        "stability": 7.51332013,
+        "difficulty": 4.75285849,
+        "elapsedDays": 2,
+        "scheduledDays": 8,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-1-rating-3",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-12T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 11,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-2-rating-1",
+      "input": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-03T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-03T10:20:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.12881914,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-2-rating-2",
+      "input": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-03T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-03T10:25:00.000Z",
+        "stability": 2.20793185,
+        "difficulty": 8.25557787,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-2-rating-3",
+      "input": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-03T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-06T10:10:00.000Z",
+        "stability": 3.26862391,
+        "difficulty": 7.38233661,
+        "elapsedDays": 2,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-3-rating-1",
+      "input": {
+        "dueAt": "2026-11-03T10:20:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.12881914,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "now": "2026-11-03T10:20:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-03T10:30:00.000Z",
+        "stability": 0.09441196,
+        "difficulty": 9.69887715,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-3-rating-2",
+      "input": {
+        "dueAt": "2026-11-03T10:20:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.12881914,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "now": "2026-11-03T10:20:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-03T10:35:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.40689792,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-3-rating-3",
+      "input": {
+        "dueAt": "2026-11-03T10:20:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.12881914,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "now": "2026-11-03T10:20:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-04T10:20:00.000Z",
+        "stability": 0.27940652,
+        "difficulty": 9.11491869,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-4-rating-1",
+      "input": {
+        "dueAt": "2026-11-03T10:35:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.40689792,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "now": "2026-11-05T10:35:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-05T10:45:00.000Z",
+        "stability": 0.1220595,
+        "difficulty": 9.79027975,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-4-rating-2",
+      "input": {
+        "dueAt": "2026-11-03T10:35:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.40689792,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "now": "2026-11-05T10:35:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-05T10:50:00.000Z",
+        "stability": 0.73567681,
+        "difficulty": 9.59149957,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-4-rating-3",
+      "input": {
+        "dueAt": "2026-11-03T10:35:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.40689792,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "now": "2026-11-05T10:35:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 1.06272542,
+        "difficulty": 9.39271939,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-5-rating-1",
+      "input": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 1.06272542,
+        "difficulty": 9.39271939,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "now": "2026-11-06T10:35:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-06T10:45:00.000Z",
+        "stability": 0.31748629,
+        "difficulty": 9.78561936,
+        "elapsedDays": 1,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-5-rating-2",
+      "input": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 1.06272542,
+        "difficulty": 9.39271939,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "now": "2026-11-06T10:35:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-08T10:35:00.000Z",
+        "stability": 1.58711877,
+        "difficulty": 9.5820872,
+        "elapsedDays": 1,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-5-rating-3",
+      "input": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 1.06272542,
+        "difficulty": 9.39271939,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "now": "2026-11-06T10:35:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-09T10:35:00.000Z",
+        "stability": 1.93467977,
+        "difficulty": 9.37855504,
+        "elapsedDays": 1,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-6-rating-1",
+      "input": {
+        "dueAt": "2026-11-06T10:45:00.000Z",
+        "stability": 0.31748629,
+        "difficulty": 9.78561936,
+        "elapsedDays": 1,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "now": "2026-11-08T10:45:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-08T10:55:00.000Z",
+        "stability": 0.14933372,
+        "difficulty": 9.91476292,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 7,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-08T10:45:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-6-rating-2",
+      "input": {
+        "dueAt": "2026-11-06T10:45:00.000Z",
+        "stability": 0.31748629,
+        "difficulty": 9.78561936,
+        "elapsedDays": 1,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "now": "2026-11-08T10:45:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-08T11:00:00.000Z",
+        "stability": 0.74086063,
+        "difficulty": 9.84291251,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 7,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-08T10:45:00.000Z"
+      }
+    },
+    {
+      "name": "path-3-step-6-rating-3",
+      "input": {
+        "dueAt": "2026-11-06T10:45:00.000Z",
+        "stability": 0.31748629,
+        "difficulty": 9.78561936,
+        "elapsedDays": 1,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "now": "2026-11-08T10:45:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-09T10:45:00.000Z",
+        "stability": 1.02146757,
+        "difficulty": 9.77106211,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 7,
+        "lapses": 2,
+        "state": "review",
+        "lastReviewedAt": "2026-11-08T10:45:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-0-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-0-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-0-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-1-rating-1",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-1-rating-2",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:25:00.000Z",
+        "stability": 0.212,
+        "difficulty": 7.60420977,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-1-rating-3",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-2-rating-1",
+      "input": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-02T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-02T10:20:00.000Z",
+        "stability": 0.1352092,
+        "difficulty": 8.80262806,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-2-rating-2",
+      "input": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-02T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-04T10:10:00.000Z",
+        "stability": 1.90622523,
+        "difficulty": 7.59678469,
+        "elapsedDays": 3,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-2-rating-3",
+      "input": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-02T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-05T10:10:00.000Z",
+        "stability": 3.00614387,
+        "difficulty": 6.39094132,
+        "elapsedDays": 3,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-3-rating-1",
+      "input": {
+        "dueAt": "2026-11-05T10:10:00.000Z",
+        "stability": 3.00614387,
+        "difficulty": 6.39094132,
+        "elapsedDays": 3,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "now": "2026-11-05T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-05T10:20:00.000Z",
+        "stability": 0.6871813,
+        "difficulty": 8.79895532,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-3-rating-2",
+      "input": {
+        "dueAt": "2026-11-05T10:10:00.000Z",
+        "stability": 3.00614387,
+        "difficulty": 6.39094132,
+        "elapsedDays": 3,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "now": "2026-11-05T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-12T10:10:00.000Z",
+        "stability": 6.73789428,
+        "difficulty": 7.58936704,
+        "elapsedDays": 3,
+        "scheduledDays": 7,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-3-rating-3",
+      "input": {
+        "dueAt": "2026-11-05T10:10:00.000Z",
+        "stability": 3.00614387,
+        "difficulty": 6.39094132,
+        "elapsedDays": 3,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "now": "2026-11-05T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-14T10:10:00.000Z",
+        "stability": 9.21124931,
+        "difficulty": 6.37977875,
+        "elapsedDays": 3,
+        "scheduledDays": 9,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-4-rating-1",
+      "input": {
+        "dueAt": "2026-11-12T10:10:00.000Z",
+        "stability": 6.73789428,
+        "difficulty": 7.58936704,
+        "elapsedDays": 3,
+        "scheduledDays": 7,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-14T10:20:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.19286971,
+        "elapsedDays": 9,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-4-rating-2",
+      "input": {
+        "dueAt": "2026-11-12T10:10:00.000Z",
+        "stability": 6.73789428,
+        "difficulty": 7.58936704,
+        "elapsedDays": 3,
+        "scheduledDays": 7,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-27T10:10:00.000Z",
+        "stability": 13.35522352,
+        "difficulty": 8.38493787,
+        "elapsedDays": 9,
+        "scheduledDays": 13,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-4-rating-3",
+      "input": {
+        "dueAt": "2026-11-12T10:10:00.000Z",
+        "stability": 6.73789428,
+        "difficulty": 7.58936704,
+        "elapsedDays": 3,
+        "scheduledDays": 7,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-12-02T10:10:00.000Z",
+        "stability": 17.74110219,
+        "difficulty": 7.57700604,
+        "elapsedDays": 9,
+        "scheduledDays": 18,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-5-rating-1",
+      "input": {
+        "dueAt": "2026-11-14T10:20:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.19286971,
+        "elapsedDays": 9,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:20:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-14T10:30:00.000Z",
+        "stability": 0.40107662,
+        "difficulty": 9.71993013,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-5-rating-2",
+      "input": {
+        "dueAt": "2026-11-14T10:20:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.19286971,
+        "elapsedDays": 9,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:20:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-14T10:35:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.44941767,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-4-step-5-rating-3",
+      "input": {
+        "dueAt": "2026-11-14T10:20:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.19286971,
+        "elapsedDays": 9,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:20:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-15T10:20:00.000Z",
+        "stability": 1.18696212,
+        "difficulty": 9.17890521,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:20:00.000Z"
+      }
+    },
+    {
+      "name": "path-0-step-0-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-0-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-0-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-1-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-1-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-11T10:00:00.000Z",
+        "stability": 7.51332013,
+        "difficulty": 4.75285849,
+        "elapsedDays": 2,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-1-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-14T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 13,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-2-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-12T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 11,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-14T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-14T10:10:00.000Z",
+        "stability": 1.56880168,
+        "difficulty": 7.39223814,
+        "elapsedDays": 13,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-2-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-12T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 11,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-14T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-12-22T10:00:00.000Z",
+        "stability": 34.8388585,
+        "difficulty": 4.74828477,
+        "elapsedDays": 13,
+        "scheduledDays": 38,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-2-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-12T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 11,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-14T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2027-01-08T10:00:00.000Z",
+        "stability": 50.66258029,
+        "difficulty": 2.1043314,
+        "elapsedDays": 13,
+        "scheduledDays": 55,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-3-rating-1-fuzz",
+      "input": {
+        "dueAt": "2027-01-04T10:00:00.000Z",
+        "stability": 50.66258029,
+        "difficulty": 2.1043314,
+        "elapsedDays": 13,
+        "scheduledDays": 51,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "now": "2027-01-04T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2027-01-04T10:10:00.000Z",
+        "stability": 3.04548093,
+        "difficulty": 7.38997579,
+        "elapsedDays": 51,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-3-rating-2-fuzz",
+      "input": {
+        "dueAt": "2027-01-04T10:00:00.000Z",
+        "stability": 50.66258029,
+        "difficulty": 2.1043314,
+        "elapsedDays": 13,
+        "scheduledDays": 51,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "now": "2027-01-04T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2027-05-06T10:00:00.000Z",
+        "stability": 126.95581683,
+        "difficulty": 4.74371562,
+        "elapsedDays": 51,
+        "scheduledDays": 122,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-3-rating-3-fuzz",
+      "input": {
+        "dueAt": "2027-01-04T10:00:00.000Z",
+        "stability": 50.66258029,
+        "difficulty": 2.1043314,
+        "elapsedDays": 13,
+        "scheduledDays": 51,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:00:00.000Z"
+      },
+      "now": "2027-01-04T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2027-06-25T10:00:00.000Z",
+        "stability": 177.52196928,
+        "difficulty": 2.09745544,
+        "elapsedDays": 51,
+        "scheduledDays": 172,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-4-rating-1-fuzz",
+      "input": {
+        "dueAt": "2027-07-01T10:00:00.000Z",
+        "stability": 177.52196928,
+        "difficulty": 2.09745544,
+        "elapsedDays": 51,
+        "scheduledDays": 178,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "now": "2027-07-03T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2027-07-03T10:10:00.000Z",
+        "stability": 4.86876667,
+        "difficulty": 7.38771571,
+        "elapsedDays": 180,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2027-07-03T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-4-rating-2-fuzz",
+      "input": {
+        "dueAt": "2027-07-01T10:00:00.000Z",
+        "stability": 177.52196928,
+        "difficulty": 2.09745544,
+        "elapsedDays": 51,
+        "scheduledDays": 178,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "now": "2027-07-03T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2028-06-15T10:00:00.000Z",
+        "stability": 395.74423131,
+        "difficulty": 4.73915103,
+        "elapsedDays": 180,
+        "scheduledDays": 348,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-07-03T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-0-step-4-rating-3-fuzz",
+      "input": {
+        "dueAt": "2027-07-01T10:00:00.000Z",
+        "stability": 177.52196928,
+        "difficulty": 2.09745544,
+        "elapsedDays": 51,
+        "scheduledDays": 178,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-01-04T10:00:00.000Z"
+      },
+      "now": "2027-07-03T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2028-06-16T10:00:00.000Z",
+        "stability": 540.37907275,
+        "difficulty": 2.09058635,
+        "elapsedDays": 180,
+        "scheduledDays": 349,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2027-07-03T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-0-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-0-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-0-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-1-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-1-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:25:00.000Z",
+        "stability": 0.212,
+        "difficulty": 7.60420977,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-1-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-2-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-01T10:20:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:30:00.000Z",
+        "stability": 0.05246409,
+        "difficulty": 9.59286876,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-2-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-01T10:20:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-01T10:35:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.19279765,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-2-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-01T10:20:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-02T10:20:00.000Z",
+        "stability": 0.73705093,
+        "difficulty": 8.79272653,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-3-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:35:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.19279765,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "now": "2026-11-01T10:35:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:45:00.000Z",
+        "stability": 0.17762911,
+        "difficulty": 9.71990645,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-3-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:35:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.19279765,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "now": "2026-11-01T10:35:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-01T10:50:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.44936983,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-3-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:35:00.000Z",
+        "stability": 0.47648842,
+        "difficulty": 9.19279765,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:20:00.000Z"
+      },
+      "now": "2026-11-01T10:35:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-02T10:35:00.000Z",
+        "stability": 0.52568267,
+        "difficulty": 9.17883322,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-4-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-02T10:35:00.000Z",
+        "stability": 0.52568267,
+        "difficulty": 9.17883322,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:35:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-04T10:45:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.71531643,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-4-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-02T10:35:00.000Z",
+        "stability": 0.52568267,
+        "difficulty": 9.17883322,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:35:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-05T10:35:00.000Z",
+        "stability": 1.45288574,
+        "difficulty": 9.44009959,
+        "elapsedDays": 3,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-4-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-02T10:35:00.000Z",
+        "stability": 0.52568267,
+        "difficulty": 9.17883322,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:35:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 2.06742372,
+        "difficulty": 9.16488276,
+        "elapsedDays": 3,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-5-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-04T10:45:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.71531643,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:45:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-04T10:55:00.000Z",
+        "stability": 0.09014587,
+        "difficulty": 9.89165482,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:45:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-5-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-04T10:45:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.71531643,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:45:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-04T11:00:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.79624214,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:45:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-1-step-5-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-04T10:45:00.000Z",
+        "stability": 0.23053466,
+        "difficulty": 9.71531643,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-04T10:35:00.000Z"
+      },
+      "now": "2026-11-04T10:45:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-05T10:45:00.000Z",
+        "stability": 0.26678127,
+        "difficulty": 9.70082948,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-04T10:45:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-0-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-0-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-0-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-1-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:15:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:25:00.000Z",
+        "stability": 0.45140292,
+        "difficulty": 8.37863212,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-1-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:15:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:30:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 6.74045952,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-1-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:15:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-10-31T10:15:00.000Z",
+        "stability": 1.33589976,
+        "difficulty": 5.10228691,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-2-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:30:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 6.74045952,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "now": "2026-11-01T10:30:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:40:00.000Z",
+        "stability": 0.40032076,
+        "difficulty": 8.91383958,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-2-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:30:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 6.74045952,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "now": "2026-11-01T10:30:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-01T10:45:00.000Z",
+        "stability": 3.59102912,
+        "difficulty": 7.8213935,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-2-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:30:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 6.74045952,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:15:00.000Z"
+      },
+      "now": "2026-11-01T10:30:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-06T10:30:00.000Z",
+        "stability": 5.11406627,
+        "difficulty": 6.72894743,
+        "elapsedDays": 2,
+        "scheduledDays": 5,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-3-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:30:00.000Z",
+        "stability": 5.11406627,
+        "difficulty": 6.72894743,
+        "elapsedDays": 2,
+        "scheduledDays": 5,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "now": "2026-11-06T10:30:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-06T10:40:00.000Z",
+        "stability": 0.94623514,
+        "difficulty": 8.91005563,
+        "elapsedDays": 5,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-3-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:30:00.000Z",
+        "stability": 5.11406627,
+        "difficulty": 6.72894743,
+        "elapsedDays": 2,
+        "scheduledDays": 5,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "now": "2026-11-06T10:30:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-18T10:30:00.000Z",
+        "stability": 10.4200154,
+        "difficulty": 7.81375124,
+        "elapsedDays": 5,
+        "scheduledDays": 12,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-3-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:30:00.000Z",
+        "stability": 5.11406627,
+        "difficulty": 6.72894743,
+        "elapsedDays": 2,
+        "scheduledDays": 5,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:30:00.000Z"
+      },
+      "now": "2026-11-06T10:30:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-22T10:30:00.000Z",
+        "stability": 13.93672861,
+        "difficulty": 6.71744685,
+        "elapsedDays": 5,
+        "scheduledDays": 16,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-4-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-16T10:30:00.000Z",
+        "stability": 10.4200154,
+        "difficulty": 7.81375124,
+        "elapsedDays": 5,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "now": "2026-11-18T10:30:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-18T10:40:00.000Z",
+        "stability": 1.40598083,
+        "difficulty": 9.26662326,
+        "elapsedDays": 12,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-18T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-4-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-16T10:30:00.000Z",
+        "stability": 10.4200154,
+        "difficulty": 7.81375124,
+        "elapsedDays": 5,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "now": "2026-11-18T10:30:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-12-05T10:30:00.000Z",
+        "stability": 18.45958426,
+        "difficulty": 8.53389457,
+        "elapsedDays": 12,
+        "scheduledDays": 17,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-18T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-2-step-4-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-16T10:30:00.000Z",
+        "stability": 10.4200154,
+        "difficulty": 7.81375124,
+        "elapsedDays": 5,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:30:00.000Z"
+      },
+      "now": "2026-11-18T10:30:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-12-11T10:30:00.000Z",
+        "stability": 23.78810463,
+        "difficulty": 7.80116586,
+        "elapsedDays": 12,
+        "scheduledDays": 23,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-18T10:30:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-0-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-0-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-0-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-1-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-1-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-11T10:00:00.000Z",
+        "stability": 7.51332013,
+        "difficulty": 4.75285849,
+        "elapsedDays": 2,
+        "scheduledDays": 10,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-1-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-11-01T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-14T10:00:00.000Z",
+        "stability": 10.96433194,
+        "difficulty": 2.11121424,
+        "elapsedDays": 2,
+        "scheduledDays": 13,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-2-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-03T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-03T10:20:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.12881914,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-2-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-03T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-03T10:25:00.000Z",
+        "stability": 2.20793185,
+        "difficulty": 8.25557787,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-2-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-01T10:10:00.000Z",
+        "stability": 0.6075801,
+        "difficulty": 7.39450274,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-01T10:00:00.000Z"
+      },
+      "now": "2026-11-03T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-06T10:10:00.000Z",
+        "stability": 3.26862391,
+        "difficulty": 7.38233661,
+        "elapsedDays": 2,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-3-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-03T10:20:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.12881914,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "now": "2026-11-03T10:20:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-03T10:30:00.000Z",
+        "stability": 0.09441196,
+        "difficulty": 9.69887715,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-3-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-03T10:20:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.12881914,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "now": "2026-11-03T10:20:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-03T10:35:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.40689792,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-3-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-03T10:20:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.12881914,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:10:00.000Z"
+      },
+      "now": "2026-11-03T10:20:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-04T10:20:00.000Z",
+        "stability": 0.27940652,
+        "difficulty": 9.11491869,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-4-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-03T10:35:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.40689792,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "now": "2026-11-05T10:35:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-05T10:45:00.000Z",
+        "stability": 0.1220595,
+        "difficulty": 9.79027975,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-4-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-03T10:35:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.40689792,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "now": "2026-11-05T10:35:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-05T10:50:00.000Z",
+        "stability": 0.73567681,
+        "difficulty": 9.59149957,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-4-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-03T10:35:00.000Z",
+        "stability": 0.24223218,
+        "difficulty": 9.40689792,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-03T10:20:00.000Z"
+      },
+      "now": "2026-11-05T10:35:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 1.06272542,
+        "difficulty": 9.39271939,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-5-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 1.06272542,
+        "difficulty": 9.39271939,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "now": "2026-11-06T10:35:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-06T10:45:00.000Z",
+        "stability": 0.31748629,
+        "difficulty": 9.78561936,
+        "elapsedDays": 1,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-5-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 1.06272542,
+        "difficulty": 9.39271939,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "now": "2026-11-06T10:35:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-08T10:35:00.000Z",
+        "stability": 1.58711877,
+        "difficulty": 9.5820872,
+        "elapsedDays": 1,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-5-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:35:00.000Z",
+        "stability": 1.06272542,
+        "difficulty": 9.39271939,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:35:00.000Z"
+      },
+      "now": "2026-11-06T10:35:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-09T10:35:00.000Z",
+        "stability": 1.93467977,
+        "difficulty": 9.37855504,
+        "elapsedDays": 1,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-6-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:45:00.000Z",
+        "stability": 0.31748629,
+        "difficulty": 9.78561936,
+        "elapsedDays": 1,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "now": "2026-11-08T10:45:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-08T10:55:00.000Z",
+        "stability": 0.14933372,
+        "difficulty": 9.91476292,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 7,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-08T10:45:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-6-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:45:00.000Z",
+        "stability": 0.31748629,
+        "difficulty": 9.78561936,
+        "elapsedDays": 1,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "now": "2026-11-08T10:45:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-08T11:00:00.000Z",
+        "stability": 0.74086063,
+        "difficulty": 9.84291251,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 7,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-08T10:45:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-3-step-6-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-06T10:45:00.000Z",
+        "stability": 0.31748629,
+        "difficulty": 9.78561936,
+        "elapsedDays": 1,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 2,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-06T10:35:00.000Z"
+      },
+      "now": "2026-11-08T10:45:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-09T10:45:00.000Z",
+        "stability": 1.02146757,
+        "difficulty": 9.77106211,
+        "elapsedDays": 2,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 7,
+        "lapses": 2,
+        "state": "review",
+        "lastReviewedAt": "2026-11-08T10:45:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-0-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-0-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:15:00.000Z",
+        "stability": 1.2931,
+        "difficulty": 5.11217071,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-0-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 0,
+        "lapses": 0,
+        "state": "new",
+        "lastReviewedAt": null
+      },
+      "now": "2026-10-30T10:00:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-01T10:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsedDays": 0,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-1-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-10-30T10:20:00.000Z",
+        "stability": 0.08335672,
+        "difficulty": 8.80630447,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-1-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-10-30T10:25:00.000Z",
+        "stability": 0.212,
+        "difficulty": 7.60420977,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-1-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-30T10:10:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "learning",
+        "lastReviewedAt": "2026-10-30T10:00:00.000Z"
+      },
+      "now": "2026-10-30T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-2-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-02T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-02T10:20:00.000Z",
+        "stability": 0.1352092,
+        "difficulty": 8.80262806,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-2-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-02T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-04T10:10:00.000Z",
+        "stability": 1.90622523,
+        "difficulty": 7.59678469,
+        "elapsedDays": 3,
+        "scheduledDays": 2,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-2-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-10-31T10:10:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-10-30T10:10:00.000Z"
+      },
+      "now": "2026-11-02T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-05T10:10:00.000Z",
+        "stability": 3.00614387,
+        "difficulty": 6.39094132,
+        "elapsedDays": 3,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-3-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-05T10:10:00.000Z",
+        "stability": 3.00614387,
+        "difficulty": 6.39094132,
+        "elapsedDays": 3,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "now": "2026-11-05T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-05T10:20:00.000Z",
+        "stability": 0.6871813,
+        "difficulty": 8.79895532,
+        "elapsedDays": 3,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-3-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-05T10:10:00.000Z",
+        "stability": 3.00614387,
+        "difficulty": 6.39094132,
+        "elapsedDays": 3,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "now": "2026-11-05T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-11T10:10:00.000Z",
+        "stability": 6.73789428,
+        "difficulty": 7.58936704,
+        "elapsedDays": 3,
+        "scheduledDays": 6,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-3-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-05T10:10:00.000Z",
+        "stability": 3.00614387,
+        "difficulty": 6.39094132,
+        "elapsedDays": 3,
+        "scheduledDays": 3,
+        "learningSteps": 0,
+        "reps": 3,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-02T10:10:00.000Z"
+      },
+      "now": "2026-11-05T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-13T10:10:00.000Z",
+        "stability": 9.21124931,
+        "difficulty": 6.37977875,
+        "elapsedDays": 3,
+        "scheduledDays": 8,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-4-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-12T10:10:00.000Z",
+        "stability": 6.73789428,
+        "difficulty": 7.58936704,
+        "elapsedDays": 3,
+        "scheduledDays": 7,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:10:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-14T10:20:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.19286971,
+        "elapsedDays": 9,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-4-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-12T10:10:00.000Z",
+        "stability": 6.73789428,
+        "difficulty": 7.58936704,
+        "elapsedDays": 3,
+        "scheduledDays": 7,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:10:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-28T10:10:00.000Z",
+        "stability": 13.35522352,
+        "difficulty": 8.38493787,
+        "elapsedDays": 9,
+        "scheduledDays": 14,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-4-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-12T10:10:00.000Z",
+        "stability": 6.73789428,
+        "difficulty": 7.58936704,
+        "elapsedDays": 3,
+        "scheduledDays": 7,
+        "learningSteps": 0,
+        "reps": 4,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-05T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:10:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-12-03T10:10:00.000Z",
+        "stability": 17.74110219,
+        "difficulty": 7.57700604,
+        "elapsedDays": 9,
+        "scheduledDays": 19,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 0,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-5-rating-1-fuzz",
+      "input": {
+        "dueAt": "2026-11-14T10:20:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.19286971,
+        "elapsedDays": 9,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:20:00.000Z",
+      "verdict": "incorrect",
+      "expected": {
+        "dueAt": "2026-11-14T10:30:00.000Z",
+        "stability": 0.40107662,
+        "difficulty": 9.71993013,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:20:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-5-rating-2-fuzz",
+      "input": {
+        "dueAt": "2026-11-14T10:20:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.19286971,
+        "elapsedDays": 9,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:20:00.000Z",
+      "verdict": "partial",
+      "expected": {
+        "dueAt": "2026-11-14T10:35:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.44941767,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:20:00.000Z"
+      },
+      "fuzz": true
+    },
+    {
+      "name": "path-4-step-5-rating-3-fuzz",
+      "input": {
+        "dueAt": "2026-11-14T10:20:00.000Z",
+        "stability": 1.13940782,
+        "difficulty": 9.19286971,
+        "elapsedDays": 9,
+        "scheduledDays": 0,
+        "learningSteps": 0,
+        "reps": 5,
+        "lapses": 1,
+        "state": "relearning",
+        "lastReviewedAt": "2026-11-14T10:10:00.000Z"
+      },
+      "now": "2026-11-14T10:20:00.000Z",
+      "verdict": "correct",
+      "expected": {
+        "dueAt": "2026-11-15T10:20:00.000Z",
+        "stability": 1.18696212,
+        "difficulty": 9.17890521,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "learningSteps": 0,
+        "reps": 6,
+        "lapses": 1,
+        "state": "review",
+        "lastReviewedAt": "2026-11-14T10:20:00.000Z"
+      },
+      "fuzz": true
+    }
+  ]
+}

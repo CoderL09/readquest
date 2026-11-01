@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.AiMapper">
+<select id="cached" resultType="com.readquest.pojo.AiAnalysisCache">SELECT * FROM ai_analysis_cache WHERE user_id=#{user} AND content_hash=#{hash} AND expires_at>CURRENT_TIMESTAMP(3)</select>
+<insert id="save">INSERT INTO ai_analysis_cache(user_id,content_hash,result_json,expires_at) VALUES(#{userId},#{contentHash},#{resultJson},#{expiresAt}) ON DUPLICATE KEY UPDATE result_json=#{resultJson},expires_at=#{expiresAt}</insert>
+<delete id="cleanup">DELETE FROM ai_analysis_cache WHERE expires_at &lt; CURRENT_TIMESTAMP(3)</delete>
+</mapper>

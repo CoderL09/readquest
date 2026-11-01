@@ -1,0 +1,4 @@
+CREATE TABLE catalog_snapshots (
+ cache_key VARCHAR(64) CHARACTER SET ascii COLLATE ascii_bin PRIMARY KEY,
+ items_json LONGTEXT NOT NULL, fetched_at TIMESTAMP(3) NOT NULL,expires_at TIMESTAMP(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

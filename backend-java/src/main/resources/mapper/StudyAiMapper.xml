@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.StudyAiMapper">
+ <select id="lockChapter" resultType="com.readquest.pojo.Chapter">SELECT * FROM chapters WHERE id=#{chapter} FOR UPDATE</select>
+ <select id="quiz" resultType="com.readquest.pojo.ChapterQuiz">SELECT * FROM chapter_quizzes WHERE chapter_id=#{chapter}</select>
+ <insert id="claim">INSERT INTO chapter_quizzes(chapter_id,book_id,source_hash,questions_json,status,request_id,lease_expires_at,updated_at) VALUES(#{chapterId},#{bookId},#{sourceHash},NULL,'generating',#{requestId},#{leaseExpiresAt},#{updatedAt}) ON DUPLICATE KEY UPDATE book_id=#{bookId},source_hash=#{sourceHash},questions_json=NULL,status='generating',request_id=#{requestId},lease_expires_at=#{leaseExpiresAt},updated_at=#{updatedAt}</insert>
+ <update id="publish">UPDATE chapter_quizzes SET status='ready',questions_json=#{questions},lease_expires_at=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE chapter_id=#{chapter} AND request_id=#{request} AND status='generating'</update>
+ <update id="fail">UPDATE chapter_quizzes SET status='failed',lease_expires_at=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE chapter_id=#{chapter} AND request_id=#{request} AND status='generating'</update>
+</mapper>

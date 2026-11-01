@@ -1,0 +1,14 @@
+.git
+**/.git
+**/node_modules
+**/dist
+**/target
+**/private_uploads
+**/.env*
+**/*.log
+**/*.mdx
+**/*.epub
+**/.idea
+**/.vscode
+work
+outputs

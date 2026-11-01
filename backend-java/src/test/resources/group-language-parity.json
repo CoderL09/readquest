@@ -1,0 +1,346 @@
+[
+  {
+    "text": "I don't know whether this sentence is correct.",
+    "allowed": true
+  },
+  {
+    "text": "Is this right?!",
+    "allowed": true
+  },
+  {
+    "text": "Please read https://example.com/chapter/12?view=full 👍",
+    "allowed": true
+  },
+  {
+    "text": "The Café scene feels important.",
+    "allowed": true
+  },
+  {
+    "text": "Can you comment on this phrase?",
+    "allowed": true
+  },
+  {
+    "text": "Old clock matters.",
+    "allowed": true
+  },
+  {
+    "text": "What happens next?",
+    "allowed": true
+  },
+  {
+    "text": "Mara found a silver key.",
+    "allowed": true
+  },
+  {
+    "text": "That makes sense.",
+    "allowed": true
+  },
+  {
+    "text": "Good morning friends.",
+    "allowed": true
+  },
+  {
+    "text": "Hola, no sé cómo organizar esta frase.",
+    "allowed": false
+  },
+  {
+    "text": "Je ne sais pas comment écrire cette phrase.",
+    "allowed": false
+  },
+  {
+    "text": "Este libro es muy interesante.",
+    "allowed": false
+  },
+  {
+    "text": "Das Buch ist sehr interessant.",
+    "allowed": false
+  },
+  {
+    "text": "Questo libro è molto interessante.",
+    "allowed": false
+  },
+  {
+    "text": "Este livro é muito interessante.",
+    "allowed": false
+  },
+  {
+    "text": "Ce livre est très intéressant.",
+    "allowed": false
+  },
+  {
+    "text": "Ich verstehe dieses Kapitel nicht.",
+    "allowed": false
+  },
+  {
+    "text": "Me gusta mucho este capítulo.",
+    "allowed": false
+  },
+  {
+    "text": "Non capisco questo capitolo.",
+    "allowed": false
+  },
+  {
+    "text": "Eu não entendo este capítulo.",
+    "allowed": false
+  },
+  {
+    "text": "La lectura cambia vidas.",
+    "allowed": false
+  },
+  {
+    "text": "Buenos dias, queridos amigos.",
+    "allowed": false
+  },
+  {
+    "text": "Nous aimons lire ensemble.",
+    "allowed": false
+  },
+  {
+    "text": "Wir lesen jeden Abend zusammen.",
+    "allowed": false
+  },
+  {
+    "text": "No sé qué decir.",
+    "allowed": false
+  },
+  {
+    "text": "Je ne comprends pas.",
+    "allowed": false
+  },
+  {
+    "text": "Was soll ich sagen?",
+    "allowed": false
+  },
+  {
+    "text": "Não sei o que dizer.",
+    "allowed": false
+  },
+  {
+    "text": "Ik begrijp dit niet.",
+    "allowed": false
+  },
+  {
+    "text": "Det här är en bra bok.",
+    "allowed": false
+  },
+  {
+    "text": "Bu kitabı anlamıyorum.",
+    "allowed": false
+  },
+  {
+    "text": "Wǒ bù zhīdào zhè jù huà duì bù duì.",
+    "allowed": false
+  },
+  {
+    "text": "👍",
+    "allowed": false
+  },
+  {
+    "text": "❤️",
+    "allowed": false
+  },
+  {
+    "text": "️",
+    "allowed": false
+  },
+  {
+    "text": "42% 📚",
+    "allowed": false
+  },
+  {
+    "text": "https://example.com 👍",
+    "allowed": false
+  },
+  {
+    "text": "...?!",
+    "allowed": false
+  },
+  {
+    "text": "Guten Morgen",
+    "allowed": false
+  },
+  {
+    "text": "Gute Nacht",
+    "allowed": false
+  },
+  {
+    "text": "Buenas noches",
+    "allowed": false
+  },
+  {
+    "text": "Buenos días",
+    "allowed": false
+  },
+  {
+    "text": "Buona sera",
+    "allowed": false
+  },
+  {
+    "text": "Buongiorno amici",
+    "allowed": false
+  },
+  {
+    "text": "Danke schön",
+    "allowed": false
+  },
+  {
+    "text": "Vielen Dank",
+    "allowed": false
+  },
+  {
+    "text": "Non capisco",
+    "allowed": false
+  },
+  {
+    "text": "No entiendo",
+    "allowed": false
+  },
+  {
+    "text": "Je comprends",
+    "allowed": false
+  },
+  {
+    "text": "Ich verstehe",
+    "allowed": false
+  },
+  {
+    "text": "Muy bien",
+    "allowed": false
+  },
+  {
+    "text": "Très bien",
+    "allowed": false
+  },
+  {
+    "text": "Molto bene",
+    "allowed": false
+  },
+  {
+    "text": "Muito bom",
+    "allowed": false
+  },
+  {
+    "text": "Tot ziens",
+    "allowed": false
+  },
+  {
+    "text": "Merhaba arkadaşlar",
+    "allowed": false
+  },
+  {
+    "text": "Selamat pagi",
+    "allowed": false
+  },
+  {
+    "text": "C'est bon",
+    "allowed": false
+  },
+  {
+    "text": "Ça va",
+    "allowed": false
+  },
+  {
+    "text": "Como estas",
+    "allowed": false
+  },
+  {
+    "text": "Wie gehts",
+    "allowed": false
+  },
+  {
+    "text": "No sé",
+    "allowed": false
+  },
+  {
+    "text": "Je sais",
+    "allowed": false
+  },
+  {
+    "text": "Goedemorgen",
+    "allowed": false
+  },
+  {
+    "text": "Agatha Christie",
+    "allowed": true
+  },
+  {
+    "text": "Poirot",
+    "allowed": true
+  },
+  {
+    "text": "Café noir",
+    "allowed": true
+  },
+  {
+    "text": "Mara suspicious maybe",
+    "allowed": true
+  },
+  {
+    "text": "I not understand",
+    "allowed": true
+  },
+  {
+    "text": "Why this tense",
+    "allowed": true
+  },
+  {
+    "text": "Mara is brave",
+    "allowed": true
+  },
+  {
+    "text": "Anna is brave",
+    "allowed": true
+  },
+  {
+    "text": "Maria is brave",
+    "allowed": true
+  },
+  {
+    "text": "Luna is brave",
+    "allowed": true
+  },
+  {
+    "text": "Hector is brave",
+    "allowed": true
+  },
+  {
+    "text": "Alice is brave",
+    "allowed": true
+  },
+  {
+    "text": "Emma is brave",
+    "allowed": true
+  },
+  {
+    "text": "Tom is brave",
+    "allowed": true
+  },
+  {
+    "text": "Sam is brave",
+    "allowed": true
+  },
+  {
+    "text": "我觉得医生可能是凶手。",
+    "allowed": false
+  },
+  {
+    "text": "I think 医生 did it.",
+    "allowed": false
+  },
+  {
+    "text": "Это хорошая книга.",
+    "allowed": false
+  },
+  {
+    "text": "هذا كتاب جيد.",
+    "allowed": false
+  },
+  {
+    "text": "This looks safe‮txt.exe",
+    "allowed": false
+  },
+  {
+    "text": "hello\u0000world",
+    "allowed": false
+  }
+]

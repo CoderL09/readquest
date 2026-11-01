@@ -1,0 +1,47 @@
+[
+  {
+    "id": "zh-kid1412",
+    "name": "Kid1412",
+    "homepage": "https://zh.kid1412.by/",
+    "mode": "external-only",
+    "enabled": true,
+    "configured": true,
+    "healthStatus": "unknown",
+    "capabilities": [
+      "external-open"
+    ],
+    "lastSuccessAt": null,
+    "lastErrorCode": null,
+    "notice": "仅打开第三方网站；ReadQuest 不抓取、代理或保证其文件。"
+  },
+  {
+    "id": "mgreader",
+    "name": "MGReader",
+    "homepage": "https://mgreader.com/",
+    "mode": "external-only",
+    "enabled": true,
+    "configured": true,
+    "healthStatus": "unknown",
+    "capabilities": [
+      "external-open"
+    ],
+    "lastSuccessAt": null,
+    "lastErrorCode": null,
+    "notice": "仅打开第三方网站；ReadQuest 不抓取、代理或保证其文件。"
+  },
+  {
+    "id": "magazinelib",
+    "name": "MagazineLib",
+    "homepage": "https://magazinelib.com/",
+    "mode": "external-only",
+    "enabled": true,
+    "configured": true,
+    "healthStatus": "unknown",
+    "capabilities": [
+      "external-open"
+    ],
+    "lastSuccessAt": null,
+    "lastErrorCode": null,
+    "notice": "仅打开第三方网站；ReadQuest 不抓取、代理或保证其文件。"
+  }
+]

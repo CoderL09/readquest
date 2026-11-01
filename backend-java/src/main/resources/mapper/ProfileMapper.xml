@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.ProfileMapper">
+ <insert id="ensure">INSERT INTO reading_profiles(user_id) VALUES(#{user}) ON DUPLICATE KEY UPDATE user_id=#{user}</insert>
+ <select id="profile" resultType="com.readquest.pojo.ReadingProfile">SELECT * FROM reading_profiles WHERE user_id=#{user} FOR UPDATE</select>
+ <update id="save">UPDATE reading_profiles SET current_lexile=#{currentLexile},comfort_zone_min=#{comfortZoneMin},comfort_zone_max=#{comfortZoneMax},i_plus_one_min=#{iPlusOneMin},i_plus_one_max=#{iPlusOneMax},total_reading_minutes=#{totalReadingMinutes},average_lookup_per_sentence=#{averageLookupPerSentence},average_comprehension_score=#{averageComprehensionScore},reading_confidence=#{readingConfidence},last_adjustment_reason=#{lastAdjustmentReason},last_adjusted_at=#{lastAdjustedAt},updated_at=CURRENT_TIMESTAMP(3) WHERE user_id=#{userId}</update>
+ <select id="metadataCount" resultType="long">SELECT COUNT(*) FROM book_metadata</select>
+ <insert id="insertMetadata">INSERT INTO book_metadata(id,title,author,cover,description,lexile,difficulty_level,genre,source_url) VALUES(#{id},#{title},#{author},#{cover},#{description},#{lexile},#{difficultyLevel},#{genre},#{sourceUrl}) ON DUPLICATE KEY UPDATE id=#{id}</insert>
+ <select id="metadata" resultType="com.readquest.pojo.BookMetadata">SELECT * FROM book_metadata ORDER BY lexile,title,id</select>
+ <select id="metadataById" resultType="com.readquest.pojo.BookMetadata">SELECT * FROM book_metadata WHERE id=#{id}</select>
+ <insert id="insertCalibration">INSERT INTO calibration_sessions(id,user_id,status,current_step,estimated_lexile,created_at,updated_at) VALUES(#{id},#{userId},#{status},#{currentStep},#{estimatedLexile},#{createdAt},#{updatedAt})</insert>
+ <select id="calibration" resultType="com.readquest.pojo.CalibrationSession">SELECT * FROM calibration_sessions WHERE user_id=#{user} AND id=#{id} FOR UPDATE</select>
+ <update id="saveCalibration">UPDATE calibration_sessions SET status=#{status},current_step=#{currentStep},estimated_lexile=#{estimatedLexile},final_profile_json=#{finalProfileJson},updated_at=CURRENT_TIMESTAMP(3) WHERE user_id=#{userId} AND id=#{id}</update>
+ <select id="samples" resultType="com.readquest.pojo.CalibrationSample">SELECT * FROM calibration_samples WHERE session_id=#{session} ORDER BY step</select>
+ <insert id="insertSample">INSERT INTO calibration_samples(session_id,step,sample_id,lexile,text,started_at) VALUES(#{sessionId},#{step},#{sampleId},#{lexile},#{text},#{startedAt})</insert>
+ <update id="saveSample">UPDATE calibration_samples SET finished_at=#{finishedAt},reading_seconds=#{readingSeconds},lookup_count=#{lookupCount},comprehension_score=#{comprehensionScore},flow_score=#{flowScore} WHERE session_id=#{sessionId} AND step=#{step} AND finished_at IS NULL</update>
+ <select id="recentProgress" resultType="com.readquest.pojo.ReadingProgress">SELECT * FROM reading_progress WHERE user_id=#{user} ORDER BY updated_at DESC,book_id,chapter_id LIMIT 5</select>
+ <select id="bookProgress" resultType="com.readquest.pojo.BookProgress">SELECT book_id,SUM(completed_paragraphs) AS completed_paragraphs,SUM(total_paragraphs) AS total_paragraphs,SUM(total_reading_ms) AS total_reading_ms,MAX(updated_at) AS updated_at FROM reading_progress WHERE user_id=#{user} GROUP BY book_id ORDER BY updated_at DESC,book_id</select>
+ <select id="reviewStats" resultType="map">SELECT COUNT(*) AS attempts,COALESCE(SUM(CASE WHEN semantic_verdict='correct' THEN 1 ELSE 0 END),0) AS correct FROM review_attempts WHERE user_id=#{user} AND grading_state='completed' AND stage='initial'</select>
+ <select id="lookupStats" resultType="map">SELECT COUNT(*) AS total,COALESCE(SUM(CASE WHEN review_status='mastered' THEN 1 ELSE 0 END),0) AS mastered,COALESCE(SUM(CASE WHEN review_status IN ('new','learning') THEN 1 ELSE 0 END),0) AS learning,COALESCE(SUM(CASE WHEN review_status='reviewing' THEN 1 ELSE 0 END),0) AS reviewing,COALESCE(SUM(CASE WHEN review_status!='mastered' AND next_review_at &lt;=CURRENT_TIMESTAMP(3) THEN 1 ELSE 0 END),0) AS due FROM lookup_items WHERE user_id=#{user}</select>
+ <select id="flowItems" resultType="com.readquest.pojo.LookupItem">SELECT * FROM lookup_items WHERE user_id=#{user} AND paragraph_index IS NOT NULL<if test="book != null"> AND book_id=#{book} AND chapter_id=#{chapter}</if> ORDER BY paragraph_index,id</select>
+</mapper>

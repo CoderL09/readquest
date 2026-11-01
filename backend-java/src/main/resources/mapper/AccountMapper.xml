@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.AccountMapper">
+ <select id="lockUser" resultType="com.readquest.pojo.User">SELECT * FROM users WHERE id=#{user} FOR UPDATE</select>
+ <select id="job" resultType="com.readquest.pojo.AccountDeletionJob">SELECT * FROM account_deletion_jobs WHERE user_id=#{user}</select>
+ <select id="lockJob" resultType="com.readquest.pojo.AccountDeletionJob">SELECT * FROM account_deletion_jobs WHERE id=#{id} FOR UPDATE</select>
+ <select id="pending" resultType="com.readquest.pojo.AccountDeletionJob">SELECT * FROM account_deletion_jobs WHERE status='pending' ORDER BY requested_at LIMIT 10</select>
+ <insert id="insert">INSERT INTO account_deletion_jobs(id,user_id,status,avatar_name,dictionary_key,last_error,attempts,requested_at,completed_at) VALUES(#{id},#{userId},'pending',#{avatarName},#{dictionaryKey},NULL,0,#{requestedAt},NULL)</insert>
+ <update id="block">UPDATE users SET status='deletion_pending',updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{user} AND status='active'</update>
+ <delete id="revoke">DELETE FROM refresh_sessions WHERE user_id=#{user}</delete>
+ <update id="closeBooks">UPDATE books SET visibility='removed',moderation_status='blocked',owner_id=NULL,file_hash=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE owner_id=#{user}</update>
+ <update id="anonymize">UPDATE users SET email=#{email},display_name='Deleted Reader',avatar_url='',password_hash=#{password},status='deleted',updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{user} AND status='deletion_pending'</update>
+ <update id="completed">UPDATE account_deletion_jobs SET status='completed',completed_at=CURRENT_TIMESTAMP(3),avatar_name=NULL,dictionary_key=NULL,last_error=NULL WHERE id=#{id}</update>
+ <update id="failed">UPDATE account_deletion_jobs SET attempts=attempts+1,last_error='DELETION_STEP_FAILED' WHERE id=#{id} AND status='pending'</update>
+</mapper>

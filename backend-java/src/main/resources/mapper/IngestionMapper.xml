@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.readquest.mapper.IngestionMapper">
+ <update id="metadata">UPDATE books SET title=CASE WHEN #{title}='' THEN title ELSE #{title} END,author=CASE WHEN #{author}='' THEN author ELSE #{author} END,cover_url=#{cover},metadata_json=#{metadata} WHERE id=#{book}</update>
+ <select id="lockActiveUser" resultType="com.readquest.pojo.User">SELECT * FROM users WHERE id=#{id} AND status='active' FOR UPDATE</select>
+ <select id="lockBook" resultType="com.readquest.pojo.Book">SELECT * FROM books WHERE id=#{id} FOR UPDATE</select>
+ <select id="findDuplicate" resultType="com.readquest.pojo.Book">SELECT * FROM books WHERE owner_id=#{owner} AND file_hash=#{hash} AND visibility!='removed'</select>
+ <insert id="insertBook">INSERT INTO books(id,owner_id,title,author,status,asset_scope,visibility,moderation_status,file_path,file_hash,reading_mode,rights_attested_at,created_at,updated_at) VALUES(#{id},#{ownerId},#{title},#{author},'uploaded','private','public','unreviewed',#{filePath},#{fileHash},#{readingMode},#{rightsAttestedAt},#{createdAt},#{updatedAt})</insert>
+ <insert id="insertChapter">INSERT INTO chapters(id,book_id,chapter_index,stage_title,content,content_text,content_html,source_href,stage_summary) VALUES(#{id},#{bookId},#{chapterIndex},#{stageTitle},#{content},#{contentText},#{contentHtml},#{sourceHref},COALESCE(#{stageSummary},''))</insert>
+ <insert id="insertJob">INSERT INTO book_import_jobs(id,user_id,book_id,status,reading_mode,words_per_quest,created_at,updated_at) VALUES(#{id},#{userId},#{bookId},'queued',#{readingMode},#{wordsPerQuest},#{createdAt},#{updatedAt})</insert>
+ <select id="findJob" resultType="com.readquest.pojo.BookImportJob">SELECT * FROM book_import_jobs WHERE user_id=#{user} AND id=#{id}</select>
+ <select id="latestJob" resultType="com.readquest.pojo.BookImportJob">SELECT * FROM book_import_jobs WHERE user_id=#{user} AND book_id=#{book} ORDER BY created_at DESC,id DESC LIMIT 1</select>
+ <select id="pending" resultType="com.readquest.pojo.BookImportJob">SELECT * FROM book_import_jobs WHERE (status='queued' OR (status='processing' AND lease_expires_at &lt; CURRENT_TIMESTAMP(3))) AND attempts &lt; 3 ORDER BY created_at LIMIT 10</select>
+ <update id="claim">UPDATE book_import_jobs SET status='processing',phase='parsing',progress=10,error_message=NULL,run_id=#{run},attempts=attempts+1,lease_expires_at=TIMESTAMPADD(MINUTE,10,CURRENT_TIMESTAMP(3)),updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND attempts &lt; 3 AND (status='queued' OR (status='processing' AND lease_expires_at &lt; CURRENT_TIMESTAMP(3)))</update>
+ <update id="renew">UPDATE book_import_jobs SET lease_expires_at=TIMESTAMPADD(MINUTE,10,CURRENT_TIMESTAMP(3)),updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND run_id=#{run} AND status='processing' AND lease_expires_at > CURRENT_TIMESTAMP(3)</update>
+ <update id="checkpoint">UPDATE book_import_jobs SET phase=#{phase},progress=#{progress},updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND run_id=#{run} AND status='processing' AND lease_expires_at > CURRENT_TIMESTAMP(3)</update>
+ <update id="cancelJobs">UPDATE book_import_jobs SET status='cancelled',phase='cancelled',lease_expires_at=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE book_id=#{book} AND status IN ('queued','processing')</update>
+ <update id="resetBook">UPDATE books SET status='uploaded',progress=0,error_message=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{book} AND visibility!='removed'</update>
+ <update id="cancelBook">UPDATE books SET status='cancelled',error_message=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{book} AND status!='completed' AND visibility!='removed'</update>
+ <update id="progressBook">UPDATE books SET status='processing',progress=#{progress},error_message=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{book} AND visibility!='removed' AND status IN ('uploaded','processing','failed')</update>
+ <select id="lockClaim" resultType="com.readquest.pojo.BookImportJob">SELECT * FROM book_import_jobs WHERE id=#{id} AND run_id=#{run} AND status='processing' AND lease_expires_at > CURRENT_TIMESTAMP(3) FOR UPDATE</select>
+ <update id="finishJob">UPDATE book_import_jobs SET status='completed',phase='completed',progress=100,lease_expires_at=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND run_id=#{run} AND status='processing'</update>
+ <update id="failJob">UPDATE book_import_jobs SET status='failed',phase='failed',error_message=#{message},lease_expires_at=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND run_id=#{run} AND status='processing'</update>
+ <update id="completeBook">UPDATE books SET status='completed',progress=100,total_chapters=#{chapters},word_count=#{words},error_message=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND visibility!='removed'</update>
+ <update id="failBook">UPDATE books SET status='failed',error_message=#{message},updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND visibility!='removed'</update>
+ <update id="removeBook">UPDATE books SET visibility='removed',file_hash=NULL,updated_at=CURRENT_TIMESTAMP(3) WHERE id=#{id} AND owner_id=#{owner} AND visibility!='removed'</update>
+ <select id="exhausted" resultType="com.readquest.pojo.BookImportJob">SELECT * FROM book_import_jobs WHERE status='processing' AND attempts >= 3 AND lease_expires_at &lt; CURRENT_TIMESTAMP(3) ORDER BY created_at LIMIT 10</select>
+</mapper>
